@@ -3,12 +3,33 @@
 ## Exercise I
 
 a)
-
+```
+a = 0 
+  while (a < n * n * n):
+    a = a + n * n
+```
+This will be O(n) because the while loop will repeat n times, so the higher the value of n, the longer it will take. Also it has since it has a 1:1 relation (n:n), the slope of this will be exactly 45 degree which is the cut off for O(n) and start of O(n^2). 
 
 b)
-
+```
+sum = 0
+  for i in range(n):
+    j = 1
+    while j < n: 
+      j *= 2
+      sum += 1
+```
+This will be O(n(log n)) sine the for loop will be O(n) and the while loop will be O(log n). The for loop does not have a break so it will go trough the whole range. The while loop will start exiting later and later the higher the value of n is. 
 
 c)
+```
+def bunnyEars(bunnies):
+  if bunnies == 0:
+    return 0
+
+  return 2 + bunnyEars(bunnies-1)
+```
+This is not an efficient function since it could have been returned with a calculation of 2*n which would have been O(1). Because it is recursive it will have to call the function n times (n being the value of bunnies) so it will be O(n).
 
 ## Exercise II
 - define a function
